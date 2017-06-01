@@ -14,9 +14,11 @@
 		A09E53091EDFF90A00E2695E /* LRChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A09E53071EDFF90A00E2695E /* LRChat.xcdatamodeld */; };
 		A09E530B1EDFF90A00E2695E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09E530A1EDFF90A00E2695E /* Assets.xcassets */; };
 		A09E530E1EDFF90A00E2695E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09E530C1EDFF90A00E2695E /* LaunchScreen.storyboard */; };
+		E9A39BC503A5C9258EA5D9B8 /* libPods-LRChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CE0C97F63C134D93C77472 /* libPods-LRChat.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69CE0C97F63C134D93C77472 /* libPods-LRChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LRChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09E52F81EDFF90A00E2695E /* LRChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09E52FC1EDFF90A00E2695E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A09E52FE1EDFF90A00E2695E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		A09E530A1EDFF90A00E2695E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A09E530D1EDFF90A00E2695E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A09E530F1EDFF90A00E2695E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC44AA2DFCD5A398B36D8DAC /* Pods-LRChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LRChat/Pods-LRChat.debug.xcconfig"; sourceTree = "<group>"; };
+		EB0912D727621C666E56516F /* Pods-LRChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-LRChat/Pods-LRChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A39BC503A5C9258EA5D9B8 /* libPods-LRChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		290E82FE1F9596BA51E5E2CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69CE0C97F63C134D93C77472 /* libPods-LRChat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A09E52EF1EDFF90A00E2695E = {
 			isa = PBXGroup;
 			children = (
 				A09E52FA1EDFF90A00E2695E /* LRChat */,
 				A09E52F91EDFF90A00E2695E /* Products */,
+				A4491394D5AB382FC1EE13A4 /* Pods */,
+				290E82FE1F9596BA51E5E2CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +97,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A4491394D5AB382FC1EE13A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC44AA2DFCD5A398B36D8DAC /* Pods-LRChat.debug.xcconfig */,
+				EB0912D727621C666E56516F /* Pods-LRChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A09E53121EDFF90A00E2695E /* Build configuration list for PBXNativeTarget "LRChat" */;
 			buildPhases = (
+				5366F8B3A41CC0CC434612F5 /* [CP] Check Pods Manifest.lock */,
 				A09E52F41EDFF90A00E2695E /* Sources */,
 				A09E52F51EDFF90A00E2695E /* Frameworks */,
 				A09E52F61EDFF90A00E2695E /* Resources */,
+				BC822311025E87414A22107F /* [CP] Embed Pods Frameworks */,
+				2640D58D77E03175D038E922 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +175,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2640D58D77E03175D038E922 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LRChat/Pods-LRChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5366F8B3A41CC0CC434612F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC822311025E87414A22107F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LRChat/Pods-LRChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A09E52F41EDFF90A00E2695E /* Sources */ = {
@@ -273,6 +348,7 @@
 		};
 		A09E53131EDFF90A00E2695E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC44AA2DFCD5A398B36D8DAC /* Pods-LRChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RHBBUXEY37;
@@ -285,6 +361,7 @@
 		};
 		A09E53141EDFF90A00E2695E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB0912D727621C666E56516F /* Pods-LRChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RHBBUXEY37;
